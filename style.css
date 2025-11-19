@@ -1,0 +1,273 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  /* Check the coach for proper use on FE Mentor */
+  height: 100%;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+:root {
+  /* ### Primary */
+  --Purple600: hsl(246, 80%, 60%);
+
+  --Orange300-work: hsl(15, 100%, 70%);
+  --Blue300-play: hsl(195, 74%, 62%);
+  --Pink400-study: hsl(348, 100%, 68%);
+  --Green400-exercise: hsl(145, 58%, 55%);
+  --Purple700-social: hsl(264, 64%, 52%);
+  --Yellow300-self-care: hsl(43, 84%, 65%);
+
+  /* ### Neutral */
+
+  --Navy950: hsl(226, 43%, 10%);
+  --Navy900: hsl(235, 46%, 20%);
+  --Purple500: hsl(235, 45%, 61%);
+  --Navy200: hsl(236, 100%, 87%);
+
+  --default-font-size: 18px;
+  --font-family: "Rubik", sans-serif;
+  --fw300: 300;
+  --fw400: 400;
+  --fw500: 500;
+}
+body {
+  background-color: var(--Navy950);
+  font-family: var(--font-family);
+}
+
+/* DASH CONTAINER */
+.dash-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(7, auto);
+  padding: 1rem;
+
+  grid-gap: 1.4rem;
+}
+/* PROFILE CARD */
+.profile-card,
+.activity-card {
+  justify-self: center;
+  align-self: center;
+
+  display: flex;
+  flex-direction: column;
+  background-color: var(--Navy900);
+
+  border-radius: 1rem;
+  min-width: 275px;
+}
+
+/* PROFILE CARD TOP */
+.profile-card-top,
+.activity-card-bottom {
+  background-color: var(--Purple600);
+  padding: 1.8rem;
+  display: flex;
+  align-items: center;
+
+  border-radius: 1rem;
+  color: var(--Navy200);
+}
+
+.profile-card-top {
+  justify-content: space-between;
+  gap: 0;
+}
+
+.profile-card-top img,
+.activity-card-bottom img {
+  width: 60px;
+  height: auto;
+  display: block;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+.profile-card-top p,
+.activity-card-bottom p {
+  font-size: 0.8rem;
+  font-weight: var(--fw300);
+}
+.profile-card-top h1,
+.activity-card-bottom h1 {
+  font-size: 1.2rem;
+  font-weight: var(--fw300);
+}
+
+/* PROFILE CARD BOTTOM */
+.profile-card-bottom {
+  font-size: 0.9rem;
+  color: var(--Navy200);
+  padding: 1.2rem;
+  font-weight: var(--fw500);
+}
+
+.profile-card-bottom .time-selections ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--Navy200);
+  font-weight: var(--fw300);
+}
+
+.profile-card-bottom .time-selections ul li:hover {
+  color: white;
+}
+
+/* Activity Cards */
+/* Activity Card Additions */
+/* ---------------- */
+.activity-card-top {
+  padding: 1rem;
+}
+
+/* DEFAULT CARD SETTINGS */
+/* Change this to default for all cards */
+
+.work .activity-card-bottom,
+.play .activity-card-bottom,
+.study .activity-card-bottom,
+.exercise .activity-card-bottom,
+.social .activity-card-bottom,
+.self-care .activity-card-bottom {
+  background-color: var(--Navy900);
+  border-radius: 0.8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1.7rem;
+}
+
+.work .activity-card-bottom img,
+.play .activity-card-bottom img,
+.study .activity-card-bottom img,
+.exercise .activity-card-bottom img,
+.social .activity-card-bottom img,
+.self-care .activity-card-bottom img {
+  border: none;
+  border-radius: 0;
+}
+
+.work .activity-card-bottom .activity-info,
+.play .activity-card-bottom .activity-info,
+.study .activity-card-bottom .activity-info,
+.exercise .activity-card-bottom .activity-info,
+.social .activity-card-bottom .activity-info,
+.self-care .activity-card-bottom .activity-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 0.5rem;
+  color: white;
+}
+
+.work .activity-card-bottom .activity-info .activity-type,
+.play .activity-card-bottom .activity-info .activity-type,
+.study .activity-card-bottom .activity-info .activity-type,
+.exercise .activity-card-bottom .activity-info .activity-type,
+.social .activity-card-bottom .activity-info .activity-type,
+.self-care .activity-card-bottom .activity-info .activity-type {
+  font-size: 0.9rem;
+  font-weight: var(--fw500);
+}
+
+/* Hours alter with JS */
+.work .activity-card-bottom .activity-info .activity-hours,
+.play .activity-card-bottom .activity-info .activity-hours,
+.study .activity-card-bottom .activity-info .activity-hours,
+.exercise .activity-card-bottom .activity-info .activity-hours,
+.social .activity-card-bottom .activity-info .activity-hours,
+.self-care .activity-card-bottom .activity-info .activity-hours {
+  font-size: 1.5rem;
+}
+
+.work .activity-card-bottom .-d-w-m,
+.play .activity-card-bottom .-d-w-m,
+.study .activity-card-bottom .-d-w-m,
+.exercise .activity-card-bottom .-d-w-m,
+.social .activity-card-bottom .-d-w-m,
+.self-care .activity-card-bottom .-d-w-m {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 1rem;
+}
+
+.work .activity-card-bottom .-d-w-m img,
+.play .activity-card-bottom .-d-w-m img,
+.study .activity-card-bottom .-d-w-m img,
+.exercise .activity-card-bottom .-d-w-m img,
+.social .activity-card-bottom .-d-w-m img,
+.self-care .activity-card-bottom .-d-w-m img {
+  font-size: 1.5rem;
+  font-weight: var(--fw500);
+  width: 20px;
+  height: auto;
+  display: block;
+  /* align-self: flex-end; */
+}
+
+.work .activity-card-bottom .-d-w-m p,
+.play .activity-card-bottom .-d-w-m p,
+.study .activity-card-bottom .-d-w-m p,
+.exercise .activity-card-bottom .-d-w-m p,
+.social .activity-card-bottom .-d-w-m p,
+.self-care .activity-card-bottom .-d-w-m p {
+  font-size: 0.7rem;
+}
+
+/* -------------WORK------------------- */
+.work {
+  background-color: var(--Orange300-work);
+  background-image: url(./images/icon-work.svg);
+  background-repeat: no-repeat;
+  background-position: 90% -5px;
+}
+/* -------------PLAY------------------- */
+.play {
+  background-color: var(--Blue300-play);
+  background-image: url(./images/icon-play.svg);
+  background-repeat: no-repeat;
+  background-position: 90% -5px;
+}
+/* -------------STUDY------------------- */
+.study {
+  background-color: var(--Pink400-study);
+  background-image: url(./images/icon-study.svg);
+  background-repeat: no-repeat;
+  background-position: 90% -5px;
+}
+/* -------------EXERCISE------------------- */
+.exercise {
+  background-color: var(--Green400-exercise);
+  background-image: url(./images/icon-exercise.svg);
+  background-repeat: no-repeat;
+  background-position: 90% -5px;
+}
+/* -------------SOCIAL------------------- */
+.social {
+  background-color: var(--Purple700-social);
+  background-image: url(./images/icon-social.svg);
+  background-repeat: no-repeat;
+  background-position: 90% -5px;
+}
+/* -------------SELFCARE------------------- */
+.self-care {
+  background-color: var(--Yellow300-self-care);
+  background-image: url(./images/icon-self-care.svg);
+  background-repeat: no-repeat;
+  background-position: 90% -5px;
+}
